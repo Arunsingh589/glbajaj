@@ -1,0 +1,534 @@
+.stats-section {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Top Banner */
+.stats-banner {
+  background: #FFC716;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.stats-banner-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.stats-banner-item {
+  flex: 1;
+  min-width: 200px;
+}
+
+.stats-banner-text {
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: none;
+  line-height: 25px;
+}
+.stats-banner-span{
+  color: rgb(82, 82, 82);
+}
+
+.stats-banner-subtitle {
+  margin-top: 20px;
+  padding: 0 40px;
+}
+.stats-banner-subtitle, .highlight-text {
+  text-align: center;
+  color: rgb(153, 51, 0);
+}
+
+.stats-banner-subtitle h2 {
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: none;
+  line-height: 25px;
+  padding-bottom: 10px;
+}
+
+/* Entrepreneurs Section */
+.entrepreneurs-section {
+  background: #451B0D;
+  padding: 20px 20px;
+  text-align: center;
+  height: 233px;
+  overflow: hidden;
+}
+
+.entrepreneurs-header h2 {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+  font-family: MuseoSlab500Regular, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 34px;
+}
+
+.highlight-revenue {
+  color: #f4c430;
+  font-weight: 700;
+  font-size: 36px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.entrepreneurs-subtitle {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+}
+
+/* Carousel */
+.entrepreneurs-carousel {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+}
+
+.entrepreneurs-carousel .carousel-btn {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.entrepreneurs-carousel:hover .carousel-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carousel-wrapper {
+  flex: 1;
+  overflow: hidden;
+  max-width: 1230px;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.entrepreneur-card {
+  background: transparent;
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: 2px;
+  padding: 2px;
+  min-width: 380px;
+  max-width: 380px;
+  width: 380px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 0.85;
+  transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.entrepreneur-card:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.entrepreneur-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #4a2c1a;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+}
+
+.carousel-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot.active {
+  background: #f4c430;
+  width: 14px;
+  height: 14px;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Info Cards Section */
+.info-cards-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 35px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.info-card-title {
+  color: rgb(69, 21, 19);
+  font-size: 19px;
+  font-weight: 400;
+  margin: 0 0 2px 0;
+  font-family: Museo500Regular, Arial, Helvetica, Tahoma, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 30.4px;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.info-card-title::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(102, 102, 102);
+  margin-top: 10px;
+  position: relative;
+}
+
+.info-card-text {
+  color: rgb(122, 122, 122);
+  font-size: 13px;
+  line-height: 23px;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  box-sizing: border-box;
+  direction: ltr;
+}
+
+.info-card-text strong {
+  color: #333333;
+  font-weight: 700;
+}
+
+/* Mobile Contact Form Wrapper */
+.mobile-contact-form-wrapper {
+  display: none; /* Hidden by default on large screens */
+}
+
+@media (max-width: 992px) {
+  .mobile-contact-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #f5f5f5;
+  }
+}
+
+@media (max-width: 576px) {
+  .mobile-contact-form-wrapper {
+    padding: 30px 15px;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .entrepreneur-card {
+    min-width: 320px;
+    max-width: 320px;
+  }
+
+  .info-cards-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .stats-banner-text {
+    font-size: 20px;
+  }
+
+  .stats-banner-subtitle h2 {
+    font-size: 24px;
+  }
+
+  .entrepreneurs-section {
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .entrepreneurs-header h2 {
+    font-size: 26px;
+  }
+
+  .highlight-revenue {
+    font-size: 30px;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+
+  .info-cards-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-banner-content {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  .stats-banner-text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .stats-banner-subtitle h2 {
+    font-size: 20px;
+    padding-bottom: 8px;
+  }
+
+  .entrepreneurs-section {
+    height: auto;
+    padding: 25px 15px;
+  }
+
+  .entrepreneurs-header h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .highlight-revenue {
+    font-size: 24px;
+  }
+
+  .entrepreneurs-subtitle {
+    font-size: 15px;
+  }
+
+  .entrepreneur-card {
+    min-width: 280px;
+    max-width: 280px;
+    height: 100px;
+  }
+
+  .info-cards-section {
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .info-card {
+    padding: 25px 20px;
+  }
+
+  .info-card-title {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-banner {
+    padding: 12px 0;
+  }
+
+  .stats-banner-content {
+    padding: 0 15px;
+    gap: 12px;
+  }
+
+  .stats-banner-text {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .stats-banner-subtitle h2 {
+    font-size: 17px;
+    padding-bottom: 6px;
+  }
+
+  .entrepreneurs-section {
+    padding: 20px 10px;
+    height: auto;
+  }
+
+  .entrepreneurs-header h2 {
+    font-size: 17px;
+    line-height: 24px;
+    margin: 0 0 3px 0;
+  }
+
+  .highlight-revenue {
+    font-size: 20px;
+  }
+
+  .entrepreneurs-subtitle {
+    font-size: 13px;
+    margin: 0 0 10px 0;
+  }
+
+  .entrepreneur-card {
+    min-width: 260px;
+    max-width: 260px;
+    height: 90px;
+    padding: 1px;
+  }
+
+  .info-cards-section {
+    padding: 25px 15px;
+    gap: 18px;
+  }
+
+  .info-card {
+    padding: 20px 15px;
+  }
+
+  .info-card-title {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .info-card-text {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .stats-banner-text {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .stats-banner-subtitle h2 {
+    font-size: 15px;
+  }
+
+  .entrepreneurs-header h2 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .highlight-revenue {
+    font-size: 18px;
+  }
+
+  .entrepreneurs-subtitle {
+    font-size: 12px;
+  }
+
+  .entrepreneur-card {
+    min-width: 240px;
+    max-width: 240px;
+    height: 85px;
+  }
+
+  .info-card-title {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .info-card-text {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}
+
+/* Mobile Contact Form Wrapper */
+.mobile-contact-form-wrapper {
+  display: none; /* Hidden by default on large screens */
+}
+
+@media (max-width: 992px) {
+  .mobile-contact-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #f5f5f5;
+  }
+}
+
+@media (max-width: 576px) {
+  .mobile-contact-form-wrapper {
+    padding: 30px 15px;
+  }
+}

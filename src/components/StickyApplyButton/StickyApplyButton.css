@@ -1,0 +1,48 @@
+.sticky-apply-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 18px 20px;
+  background: linear-gradient(to right, #e53935, #c62828);
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  display: none; /* Hidden by default on large screens */
+}
+
+.sticky-apply-button.visible {
+  transform: translateY(0);
+}
+
+.sticky-apply-button:hover {
+  background: linear-gradient(to right, #c62828, #b71c1c);
+}
+
+.sticky-apply-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Show only on small devices */
+@media (max-width: 992px) {
+  .sticky-apply-button {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .sticky-apply-button {
+    padding: 16px 15px;
+    font-size: 16px;
+  }
+}

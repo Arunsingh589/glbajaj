@@ -1,0 +1,248 @@
+/* Top Recruiters Section */
+.top-recruiters-section {
+  background: #ffffff;
+  padding: 40px 20px 80px 20px;
+  position: relative;
+}
+
+.recruiters-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+  text-align: left;
+}
+
+.recruiters-header h2 {
+  box-sizing: border-box;
+  color: rgb(159, 22, 22);
+  display: inline-block;
+  font-family: Museo500Regular, Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  height: auto;
+  line-height: 29px;
+  text-size-adjust: 100%;
+  width: auto;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0 0 40px 0;
+}
+
+/* Carousel Container */
+.recruiters-carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.recruiters-carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.recruiters-track {
+  display: flex;
+  width: 100%;
+}
+
+.recruiter-card {
+  padding: 0 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.recruiter-logo {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 30px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.recruiter-logo:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.recruiter-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* Navigation Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #8B0000;
+  color: #8B0000;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-arrow.show {
+  opacity: 1;
+}
+
+.carousel-arrow:hover {
+  background: #8B0000;
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-arrow-left {
+  left: 0;
+}
+
+.carousel-arrow-right {
+  right: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .recruiters-carousel-container {
+    padding: 0 50px;
+  }
+
+  .recruiters-header {
+    padding: 0 50px;
+  }
+
+  .recruiters-header h2 {
+    font-size: 24px;
+  }
+
+  .recruiter-logo {
+    padding: 25px 30px;
+    min-height: 80px;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recruiters-carousel-container {
+    padding: 0 40px;
+  }
+
+  .recruiters-header {
+    padding: 0 40px;
+  }
+
+  .recruiters-header h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .recruiter-logo {
+    padding: 20px 25px;
+    min-height: 70px;
+  }
+
+  .carousel-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  .recruiter-card {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-recruiters-section {
+    padding: 30px 10px 50px 10px;
+  }
+
+  .recruiters-carousel-container {
+    padding: 0 35px;
+  }
+
+  .recruiters-header {
+    padding: 0 20px;
+  }
+
+  .recruiters-header h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .recruiter-logo {
+    padding: 15px 20px;
+    min-height: 60px;
+  }
+
+  .carousel-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .carousel-arrow-left {
+    left: 5px;
+  }
+
+  .carousel-arrow-right {
+    right: 5px;
+  }
+
+  .recruiter-card {
+    padding: 0 8px;
+  }
+
+  .recruiter-image {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 380px) {
+  .recruiters-header h2 {
+    font-size: 18px;
+  }
+
+  .recruiter-logo {
+    padding: 12px 15px;
+    min-height: 50px;
+  }
+
+  .recruiter-image {
+    max-width: 130px;
+  }
+
+  .carousel-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+}

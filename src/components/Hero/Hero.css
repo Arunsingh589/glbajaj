@@ -1,0 +1,419 @@
+.hero-section {
+  position: relative;
+  min-height: 93vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Confetti Animation */
+.confetti-container {
+  position: absolute;
+  top: 0;
+  right: 25%;
+  width: 300px;
+  height: 350px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background: var(--color);
+  left: var(--x);
+  top: 0;
+  transform: rotate(var(--rotation));
+  animation: confetti-fall 4s ease-in-out infinite;
+  animation-delay: var(--delay);
+  opacity: 0.9;
+}
+
+.confetti-piece:nth-child(odd) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.confetti-piece:nth-child(even) {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(350px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Hero Header - Logo Section */
+.hero-header {
+  position: relative;
+  z-index: 10;
+  padding: 1px 140px;
+}
+
+.hero-logo-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero-logo {
+  max-width: 320px;
+  height: auto;
+}
+
+/* Main Container */
+.hero-container {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 30px 70px;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hero Content - Left Side */
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  justify-content: center;
+  padding-right: 60px;
+}
+
+/* Achievement Badge */
+.achievement-badge {
+  background: rgba(101, 39, 14, 0.95);
+  padding: 10px;
+  border-radius: 0;
+  max-width: 470px;
+  margin-left: 110px;
+  margin-bottom: 140px;
+  text-align: center;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.achievement-text {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+  text-align: center;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.highlight-amount {
+  color: #ffcc4d;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: rgb(0, 0, 0) 2px 2px 4px;
+}
+
+.achievement-subtext {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+  text-align: center;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.achievement-name {
+  color: #ffcc4d;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+  text-align: center;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: rgb(0, 0, 0) 2px 2px 4px;
+}
+
+/* Form Wrapper - Right Side */
+.hero-form-wrapper {
+  flex-shrink: 0;
+  z-index: 10;
+  align-self: flex-start;
+  margin-top: -40px;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1200px) {
+  .hero-header {
+    padding: 25px 40px;
+  }
+
+  .hero-logo {
+    max-width: 240px;
+  }
+
+  .hero-container {
+    padding: 0 40px 60px;
+  }
+
+  .hero-content {
+    padding-right: 40px;
+  }
+
+  .achievement-badge {
+    padding: 18px 25px;
+    max-width: 400px;
+  }
+
+  .highlight-amount {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .hero-section {
+    min-height: 70vh;
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  .hero-header {
+    padding: 20px 30px;
+  }
+
+  .hero-logo {
+    max-width: 220px;
+  }
+
+  .confetti-container {
+    right: 30%;
+    width: 200px;
+    height: 250px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 30px 30px;
+    gap: 0;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    align-items: center;
+    order: 1;
+    width: 100%;
+  }
+
+  /* Hide form in hero section on small devices */
+  .hero-form-wrapper {
+    display: none;
+  }
+
+  .achievement-badge {
+    margin-left: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+    padding: 15px 20px;
+  }
+}
+
+/* Mobile Landscape and Small Tablets */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 60vh;
+    background-position: center top;
+  }
+
+  .hero-header {
+    padding: 15px 20px;
+  }
+
+  .hero-logo {
+    max-width: 200px;
+  }
+
+  .confetti-container {
+    right: 20%;
+    width: 150px;
+    height: 200px;
+  }
+
+  .hero-container {
+    padding: 15px 20px 20px;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .hero-content {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .achievement-badge {
+    padding: 12px 18px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    margin-right: 0;
+    max-width: 350px;
+  }
+
+  .achievement-text {
+    font-size: 1rem;
+    line-height: 24px;
+  }
+
+  .highlight-amount {
+    font-size: 1.5rem;
+  }
+
+  .achievement-subtext {
+    font-size: 1.1rem;
+    line-height: 24px;
+  }
+
+  .achievement-name {
+    font-size: 0.9rem;
+    line-height: 22px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 576px) {
+  .hero-section {
+    min-height: 55vh;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .hero-header {
+    padding: 12px 15px;
+  }
+
+  .hero-logo {
+    max-width: 180px;
+  }
+
+  .confetti-container {
+    display: none;
+  }
+
+  .hero-container {
+    padding: 10px 15px 15px;
+    gap: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .hero-content {
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .achievement-badge {
+    padding: 10px 15px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    margin-right: 0;
+    max-width: 300px;
+  }
+
+  .achievement-text {
+    font-size: 0.9rem;
+    line-height: 22px;
+  }
+
+  .highlight-amount {
+    font-size: 1.3rem;
+  }
+
+  .achievement-subtext {
+    font-size: 1rem;
+    line-height: 22px;
+  }
+
+  .achievement-name {
+    font-size: 0.75rem;
+    line-height: 20px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 400px) {
+  .hero-section {
+    min-height: 50vh;
+  }
+
+  .hero-header {
+    padding: 10px 12px;
+  }
+
+  .hero-logo {
+    max-width: 150px;
+  }
+
+  .hero-container {
+    padding: 10px 12px 12px;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .hero-content {
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .achievement-badge {
+    padding: 8px 12px;
+    margin-left: 0;
+    margin-bottom: 8px;
+    margin-right: 0;
+    max-width: 280px;
+  }
+
+  .achievement-text {
+    font-size: 0.8rem;
+    line-height: 20px;
+  }
+
+  .highlight-amount {
+    font-size: 1.2rem;
+  }
+
+  .achievement-subtext {
+    font-size: 0.9rem;
+    line-height: 20px;
+  }
+
+  .achievement-name {
+    font-size: 0.7rem;
+    line-height: 18px;
+  }
+}
