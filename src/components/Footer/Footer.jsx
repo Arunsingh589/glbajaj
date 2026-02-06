@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <p className="footer-text">
-          © Copyright 2024 by GL Bajaj. All Rights Reserved.
+       © 2026 Admission Assistance Platform. All rights reserved.
         </p>
       </div>
     </footer>
