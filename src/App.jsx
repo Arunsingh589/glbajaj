@@ -8,6 +8,7 @@ import WhyGLBajaj from './components/Whyglbajaj/WhyGLBajaj';
 import AboutUs from './components/AboutUs/AboutUs';
 import Footer from './components/Footer/Footer';
 import StickyApplyButton from './components/StickyApplyButton/StickyApplyButton';
+import WhatsApp from './components/WhatsApp/WhatsApp';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       <AboutUs />
       <Footer />
       <StickyApplyButton />
+          <WhatsApp />
+
     </div>
   );
 }
